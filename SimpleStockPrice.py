@@ -25,5 +25,12 @@ tickerData = yf.Ticker(tickerSymbol)
 # Get the historical prices of this ticker
 tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2023-03-20')
 
+st.write("""
+## Closing Price
+""")
 st.line_chart(tickerDf.Close)
+
+st.write("""
+## Volume Price
+""")
 st.line_chart(tickerDf.Volume)
